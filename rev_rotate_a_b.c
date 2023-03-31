@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 13:10:38 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/03/09 13:01:44 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/03/31 14:24:37 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,18 +34,18 @@ void	rev_rotate_a_b(t_stack **list_stack)
 void	rra(t_stack **a)
 {
 	rev_rotate_a_b(a);
-	ft_putstr("rra\n", 1);
+	ft_putstr_fd("rra\n", 1);
 }
 
 void	rrb(t_stack **b)
 {
 	rev_rotate_a_b(b);
-	ft_putstr("rrb\n", 1);
+	ft_putstr_fd("rrb\n", 1);
 }
 
 void	rrr(t_stack **a, t_stack **b)
 {
 	rev_rotate_a_b(a);
 	rev_rotate_a_b(b);
-	ft_putstr("rrr\n", 1);
+	ft_putstr_fd("rrr\n", 1);
 }

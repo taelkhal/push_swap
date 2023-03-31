@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 19:02:27 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/03/08 13:09:43 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/03/31 14:30:37 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	swap_a_and_b(t_stack *ptr)
 {
-	t_stack *tmp;
+	int tmp;
 	
 	if (ptr == NULL || ptr->next == NULL)
 		return ;
@@ -26,18 +26,18 @@ void	swap_a_and_b(t_stack *ptr)
 void	sa(t_stack **a)
 {
 	swap_a_and_b(*a);
-	ft_putstr("sa\n", 1);
+	ft_putstr_fd("sa\n", 1);
 }
 
 void	sb(t_stack **b)
 {
 	swap_a_and_b(*b);
-	ft_putstr("sb\n", 1);
+	ft_putstr_fd("sb\n", 1);
 }
 
 void	ss(t_stack **a, t_stack **b)
 {
 	swap_a_and_b(*a);
 	swap_a_and_b(*b);
-	ft_putstr("ss\n", 1);
+	ft_putstr_fd("ss\n", 1);
 }

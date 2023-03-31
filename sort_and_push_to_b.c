@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_a_and_b.c                                     :+:      :+:    :+:   */
+/*   sort_and_push_to_b.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/05 16:16:30 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/03/31 14:24:47 by taelkhal         ###   ########.fr       */
+/*   Created: 2023/03/30 15:39:50 by taelkhal          #+#    #+#             */
+/*   Updated: 2023/03/30 15:52:06 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_a_and_b(t_stack **src, t_stack **dst)
+void	sort_and_push_to_b(t_stack **a, t_stack **b, int *tab, int chank)
 {
-	t_stack *ptr;
+	int	i;
 
-	if (*src == NULL)
-		return ;
-	ptr = (*src)->next;
-	(*src)->next = *dst;
-	*dst = *src;
-	*src = ptr;
-}
-
-void	pa(t_stack **a, t_stack **b)
-{
-	push_a_and_b(b, a);
-	ft_putstr_fd("pa\n", 1);
-}
-
-void	pb(t_stack **a, t_stack **b)
-{
-	push_a_and_b(a, b);
-	ft_putstr_fd("pb\n", 1);
+	i = 0;
+	while (*a)
+	{
+		if ((*a)->nb <= tab[i])
+		{
+			pb(a, b);
+			rb(b);
+			i++;
+		}
+		else if ((*a)->nb > tab[i] && (*a)->nb <= tab[chank + i])
+		{
+			pb(a, b);
+			i++;
+		}
+		else
+			ra(a);
+	}
 }

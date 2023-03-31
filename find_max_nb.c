@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_a_and_b.c                                     :+:      :+:    :+:   */
+/*   find_max_nb.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/05 16:16:30 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/03/31 14:24:47 by taelkhal         ###   ########.fr       */
+/*   Created: 2023/03/30 17:02:46 by taelkhal          #+#    #+#             */
+/*   Updated: 2023/03/31 13:11:28 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push_a_and_b(t_stack **src, t_stack **dst)
+int find_max_nb(t_stack *stack)
 {
-	t_stack *ptr;
+	int max_nb;
+	int max_index;
+	int	i;
 
-	if (*src == NULL)
-		return ;
-	ptr = (*src)->next;
-	(*src)->next = *dst;
-	*dst = *src;
-	*src = ptr;
-}
-
-void	pa(t_stack **a, t_stack **b)
-{
-	push_a_and_b(b, a);
-	ft_putstr_fd("pa\n", 1);
-}
-
-void	pb(t_stack **a, t_stack **b)
-{
-	push_a_and_b(a, b);
-	ft_putstr_fd("pb\n", 1);
+	i = 0;
+	max_index = 0;
+	max_nb = stack->nb;
+	while (stack)
+	{
+		if (max_nb < stack->nb)
+		{
+			max_nb = stack->nb;
+			max_index = i;
+		}
+		stack = stack->next;
+		i++;
+	}
+	return (max_index);
 }
