@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_min_nb.c                                      :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/19 14:23:34 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/02 15:12:09 by taelkhal         ###   ########.fr       */
+/*   Created: 2023/04/02 15:10:12 by taelkhal          #+#    #+#             */
+/*   Updated: 2023/04/02 15:10:33 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap.c"
 
-int	find_min_nb(t_stack *stack)
+int	ft_strlen(const char *s)
 {
 	int	i;
 
-	i = stack->nb;
-	while(stack)
-	{
-		if (i > stack->nb)
-			i = stack->nb;
-		stack = stack->next;
-	}
+	i = 0;
+	while (s[i] != '\0')
+		i++;
 	return (i);
 }

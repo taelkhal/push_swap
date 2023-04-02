@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 14:39:27 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/02 14:47:15 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/02 15:13:22 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,18 +39,18 @@ void	check_dup_nb(t_stack *a)
 	free (str);
 }
 
-int main()
-{
-	t_stack *a;
-	t_stack *b;
-	t_stack *c;
+// int main()
+// {
+// 	t_stack *a;
+// 	t_stack *b;
+// 	t_stack *c;
 
-	a = ft_lstnew(ft_atoi("15"));
-	b = ft_lstnew(ft_atoi("63"));
-	c = ft_lstnew(ft_atoi("1"));
+// 	a = ft_lstnew(ft_atoi("15"));
+// 	b = ft_lstnew(ft_atoi("63"));
+// 	c = ft_lstnew(ft_atoi("1"));
 
-	a->next = b;
-	b->next = c;
-	c->next = NULL;
-	check_dup_nb(a);
-}
+// 	a->next = b;
+// 	b->next = c;
+// 	c->next = NULL;
+// 	check_dup_nb(a);
+// }

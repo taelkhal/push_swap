@@ -6,11 +6,21 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 14:43:14 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/02 14:43:33 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/02 15:21:20 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	ft_strlen(const char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

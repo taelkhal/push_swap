@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:27:58 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/03/31 14:09:46 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/02 15:08:43 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	sort_up_to_five(t_stack **a, t_stack **b, int chank)
 	sort_and_push_to_b(a, b, tab, chank);
 	while (*b)
 	{
-		place_max_nb_to_top(*b);
+		place_max_nb_to_top(b);
 		pa(a, b);
 	}
 	free (tab);

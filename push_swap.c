@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 13:12:21 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/02 15:01:07 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/02 15:56:19 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ void	sort_stack(t_stack **a, t_stack **b)
 		sort_three(a);
 	else if (size > 3 && size < 6 && !check_if_sorted(*a))
 		sort_five(a, b);
-	else if (size <= 100 && !check_if_sorted(a))
+	else if (size <= 100 && !check_if_sorted(*a))
 		sort_up_to_five(a, b, 13);
-	else if (size <= 500 && !check_if_sorted(a))
+	else if (size <= 500 && !check_if_sorted(*a))
 		sort_up_to_five(a, b, 32);
 }
 
@@ -72,9 +72,7 @@ int main(int ac, char **av)
 	t_stack *b;
 	char **str;
 	char *numbers;
-	
-	a = NULL;
-	b = NULL;
+
 	if (ac >= 2)
 	{
 		numbers = join_numbers(av);

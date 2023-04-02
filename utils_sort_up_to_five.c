@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 15:49:42 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/03/21 16:12:02 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/02 15:07:51 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	*sort_int_tab(int *tab, int size)
 	return (tab);
 }
 
-int	fill_tab(t_stack *a)
+int	*fill_tab(t_stack *a)
 {
 	int	*tab;
 	int	size;

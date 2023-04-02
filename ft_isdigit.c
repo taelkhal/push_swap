@@ -6,13 +6,13 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 13:29:00 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/01 13:29:16 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/02 15:35:40 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_isdigit(int c)
+int	ft_isdigit(char c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
