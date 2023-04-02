@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 15:47:01 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/02 12:59:09 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/02 14:57:07 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ void	ft_lstadd_back(t_stack **lst, t_stack *new);
 void	ft_putstr_fd(char *str, int fd);
 int	ft_isdigit(int c);
 int	ft_atoi(const char *str);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	**ft_split(char const *s, char c);
 
 
 // actions
@@ -52,10 +54,12 @@ void	rrb(t_stack **b);
 void	rrr(t_stack **a, t_stack **b);
 
 //utils
+void	sort_two(t_stack **a);
 void	sort_three(t_stack **a);
 int		find_min_nb(t_stack *stack);
 void	sort_five(t_stack **a, t_stack **b);
 int		get_pos_nb(t_stack *a, int nb);
+void	sort_up_to_five(t_stack **a, t_stack **b, int chank);
 int		fill_tab(t_stack *a);
 void	sort_and_push_to_b(t_stack **a, t_stack **b, int *tab, int chank);
 int 	find_max_nb(t_stack *stack);

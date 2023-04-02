@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_nb.c                                         :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/01 13:56:22 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/02 14:47:34 by taelkhal         ###   ########.fr       */
+/*   Created: 2023/04/02 14:43:14 by taelkhal          #+#    #+#             */
+/*   Updated: 2023/04/02 14:43:33 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	check_nb(char **str)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
+	char	*newstr;
 
 	i = 0;
-	while (str[i])
+	if (!s1 || !s2)
+		return (0);
+	newstr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!newstr)
+		return (NULL);
+	while (s1[i])
 	{
-		j = 0;
-		if (str[i][j] == '-' || str[i][j] == '+')
-			j++;
-		while (str[i][j])
-		{
-			if (!ft_isdigit(str[i][j]))
-			{
-				ft_putstr_fd("ERROR, INVALID NUMBER", 2);
-				exit (1);
-			}
-			j++;
-		}
+		newstr[i] = s1[i];
 		i++;
 	}
+	j = 0 ;
+	while (s2[j])
+	{
+		newstr[i] = s2[j];
+		i++;
+		j++;
+	}
+	newstr[i] = '\0';
+	return (newstr);
 }
