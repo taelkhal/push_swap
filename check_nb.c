@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   check_nb.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/05 15:46:26 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/01 15:30:34 by taelkhal         ###   ########.fr       */
+/*   Created: 2023/04/01 13:56:22 by taelkhal          #+#    #+#             */
+/*   Updated: 2023/04/01 14:07:20 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*ft_lstnew(int nb)
+void	check_nb(char **str)
 {
-	t_stack	*list;
+	int	i;
+	int	j;
 
-	list = (t_stack *)malloc((sizeof(t_stack)));
-	if (!list)
-		return (NULL);
-	list->nb = nb;
-	list->next = NULL;
-	return (list);
+	i = 0;
+	while (str[i])
+	{
+		j = 0;
+		if (str[i][j] == '-' || str[i][j] == '+')
+			j++;
+		while (str[i][j])
+		{
+			if (!ft_isdigit(str[i][j]))
+				ft_putstr_fd("ERROR, INVALID NUMBER", 2);
+			j++;
+		}
+		i++;
+	}
 }

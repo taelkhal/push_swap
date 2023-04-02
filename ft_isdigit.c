@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/05 15:46:26 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/01 15:30:34 by taelkhal         ###   ########.fr       */
+/*   Created: 2023/04/01 13:29:00 by taelkhal          #+#    #+#             */
+/*   Updated: 2023/04/01 13:29:16 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*ft_lstnew(int nb)
+int	ft_isdigit(int c)
 {
-	t_stack	*list;
-
-	list = (t_stack *)malloc((sizeof(t_stack)));
-	if (!list)
-		return (NULL);
-	list->nb = nb;
-	list->next = NULL;
-	return (list);
+	if (c >= '0' && c <= '9')
+		return (1);
+	return (0);
 }
