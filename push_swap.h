@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 15:47:01 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/02 15:34:53 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/04 15:21:09 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ t_stack	*ft_lstnew(int nb);
 int	ft_lstsize(t_stack *stack_a);
 void	ft_lstadd_back(t_stack **lst, t_stack *new);
 void	ft_putstr_fd(char *str, int fd);
-int	ft_isdigit(char c);
+int	ft_isdigit(int c);
 int	ft_atoi(const char *str);
 char	*ft_strjoin(char const *s1, char const *s2);
+// static int	ft_strlen(const char *s);
 char	**ft_split(char const *s, char c);
-// int	ft_strlen(const char *s);
 
 
 // actions

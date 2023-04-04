@@ -6,13 +6,13 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 15:10:12 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/02 15:10:33 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/04 15:18:46 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.c"
 
-int	ft_strlen(const char *s)
+static int	ft_strlen(const char *s)
 {
 	int	i;
 

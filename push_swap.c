@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 13:12:21 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/02 15:56:19 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/04 17:28:26 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	sort_stack(t_stack **a, t_stack **b)
 	else if (size <= 100 && !check_if_sorted(*a))
 		sort_up_to_five(a, b, 13);
 	else if (size <= 500 && !check_if_sorted(*a))
-		sort_up_to_five(a, b, 32);
+		sort_up_to_five(a, b, 34);
 }
 
 char	*join_numbers(char **str)
@@ -49,6 +49,7 @@ char	*join_numbers(char **str)
 	char *numbers;
 
 	i = 1;
+	numbers = "";
 	while (str[i])
 	{
 		j = 0;
@@ -79,12 +80,12 @@ int main(int ac, char **av)
 		str = ft_split(numbers, ' ');
 		free (numbers);
 		check_nb(str);
-		fill_stack(&a, str);
+		fill_stack(&a, str) ;
 		sort_stack(&a, &b);
 	}
 	else
 	{
-		ft_putstr_fd("ERROR: Invalid Arguments", 2);
+		ft_putstr_fd("ERROR: Invalid Arguments\n", 2);
 		exit (1);
 	}
 }
