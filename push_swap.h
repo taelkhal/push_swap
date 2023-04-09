@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 15:47:01 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/04 15:21:09 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/09 12:57:34 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
+# include <limits.h>
 
-
+# define RED	"\033[1m\033[31m"
 typedef struct s_stack
 {
 	int				nb;
@@ -34,9 +35,13 @@ int	ft_lstsize(t_stack *stack_a);
 void	ft_lstadd_back(t_stack **lst, t_stack *new);
 void	ft_putstr_fd(char *str, int fd);
 int	ft_isdigit(int c);
-int	ft_atoi(const char *str);
-char	*ft_strjoin(char const *s1, char const *s2);
+// int	ft_atoi(const char *str);
+char	*ft_strjoin(char *s1, char *s2);
+long	ft_atoi(const char *str);
+// char	*ft_strjoin(char const *s1, char const *s2);
 // static int	ft_strlen(const char *s);
+int	ft_strlen(const char *s);
+char	*ft_strdup(const char *s1);
 char	**ft_split(char const *s, char c);
 
 
@@ -69,6 +74,8 @@ void	check_nb(char **str);
 int		*create_array_from_stack_a(t_stack *a);
 void	check_dup_nb(t_stack *a);
 void	fill_stack(t_stack **a, char **str);
+void	free_stack(t_stack **stack);
+void	free_strs(char **str);
 
 
 #endif

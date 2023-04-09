@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:27:58 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/02 15:08:43 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/08 15:10:35 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,25 @@ void	sort_two(t_stack **a)
 
 void	sort_three(t_stack **a)
 {
-	if (((*a)->nb < (*a)->next->nb) && (*a)->nb < (*a)->next->next->nb)
+	if (((*a)->nb < (*a)->next->nb) && ((*a)->nb < (*a)->next->next->nb))
 	{
-		if (((*a)->next->nb) > (*a)->next->next->nb)
+		if ((*a)->next->nb > (*a)->next->next->nb)
 		{
 			rra(a);
 			sa(a);
 		}
 	}
-	else if (((*a)->nb > (*a)->next->nb && (*a)->next->nb < (*a)->next->next->nb))
-		sa(a);
-	else if (((*a)->nb < (*a)->next->nb && (*a)->nb > (*a)->next->next->nb))
-		rra(a);
-	else if (((*a)->nb > (*a)->next->nb && (*a)->nb > (*a)->next->next->nb))
+	else if (((*a)->nb > (*a)->next->nb)
+		&& ((*a)->nb < (*a)->next->next->nb))
+			sa(a);
+	else if (((*a)->nb < (*a)->next->nb)
+		&& ((*a)->nb > (*a)->next->next->nb))
+			rra(a);
+	// else if (((*a)->nb < (*a)->next->nb) && ((*a)->nb < (*a)->next->next->nb))
+	else if (((*a)->nb > (*a)->next->nb) 
+		&& ((*a)->nb > (*a)->next->next->nb))
 	{
-		if (((*a)->next->nb) < (*a)->next->next->nb)
+		if ((*a)->next->nb < (*a)->next->next->nb)
 			ra(a);
 		else
 		{

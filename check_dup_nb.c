@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 14:39:27 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/02 15:13:22 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/06 14:57:47 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	check_dup_nb(t_stack *a)
 		{
 			if (str[i] == str[j])
 			{
-				ft_putstr_fd("ERROR, Duplicate Numbers Found\n", 2);
+				ft_putstr_fd(RED"ERROR: Duplicate Numbers Found\n", 2);
 				exit (1);
 			}
 			j++;

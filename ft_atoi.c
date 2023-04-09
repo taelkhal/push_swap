@@ -6,16 +6,16 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 15:19:08 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/01 15:19:20 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/09 12:57:31 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atoi(const char *str)
+long	ft_atoi(const char *str)
 {
 	int					a;
-	unsigned long long	t;
+	long				t;
 	int					i;
 
 	a = 1;

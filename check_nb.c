@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 13:56:22 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/04 15:33:56 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/06 14:56:48 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	check_nb(char **str)
 			check = ft_isdigit(str[i][++j]);
 			if (!check)
 			{
-				ft_putstr_fd("ERROR: Invalid Number\n", 2);
+				ft_putstr_fd(RED"ERROR: Invalid Number\n", 2);
 				exit (1);
 			}
 		}
@@ -36,7 +36,7 @@ void	check_nb(char **str)
 			check = ft_isdigit(str[i][j]);
 			if (!check)
 			{
-				ft_putstr_fd("ERROR: Invalid Number\n", 2);
+				ft_putstr_fd(RED"ERROR: Invalid Number\n", 2);
 				exit (1);
 			}
 			j++;

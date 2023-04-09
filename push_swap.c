@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 13:12:21 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/04 17:28:26 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/09 14:46:05 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	*join_numbers(char **str)
 	char *numbers;
 
 	i = 1;
-	numbers = "";
+	numbers = ft_strdup("");
 	while (str[i])
 	{
 		j = 0;
@@ -57,7 +57,7 @@ char	*join_numbers(char **str)
 			j++;
 		if (!str[i][j])
 		{
-			ft_putstr_fd("ERROR: No Numbers Provided\n", 2);
+			ft_putstr_fd(RED"ERROR: No Numbers Provided\n", 2);
 			exit (1);
 		}
 		numbers = ft_strjoin(numbers, str[i]);
@@ -80,12 +80,8 @@ int main(int ac, char **av)
 		str = ft_split(numbers, ' ');
 		free (numbers);
 		check_nb(str);
-		fill_stack(&a, str) ;
+		fill_stack(&a, str);
 		sort_stack(&a, &b);
 	}
-	else
-	{
-		ft_putstr_fd("ERROR: Invalid Arguments\n", 2);
-		exit (1);
-	}
+	return (0);
 }
