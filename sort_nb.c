@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:27:58 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/08 15:10:35 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/12 15:23:08 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ void	sort_three(t_stack **a)
 	else if (((*a)->nb < (*a)->next->nb)
 		&& ((*a)->nb > (*a)->next->next->nb))
 			rra(a);
-	// else if (((*a)->nb < (*a)->next->nb) && ((*a)->nb < (*a)->next->next->nb))
 	else if (((*a)->nb > (*a)->next->nb) 
 		&& ((*a)->nb > (*a)->next->next->nb))
 	{

@@ -6,21 +6,21 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 18:17:43 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/01/19 16:14:23 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/12 15:44:01 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-// size_t	ft_strlen(const char *str)
-// {
-// 	size_t	i;
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
 
-// 	i = 0;
-// 	while (str[i])
-// 		i++;
-// 	return (i);
-// }
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
+}
 
 char	*ft_strjoin(char *s1, char *s2)
 {
@@ -65,23 +65,23 @@ int	ft_strchr(char *s)
 	return (0);
 }
 
-// char	*ft_strdup(const char *s1)
-// {
-// 	char	*copy;
-// 	int		i;
+char	*ft_strdup(const char *s1)
+{
+	char	*copy;
+	int		i;
 
-// 	copy = malloc(ft_strlen(s1) + 1);
-// 	i = 0;
-// 	if (copy == NULL)
-// 		return (NULL);
-// 	while (s1[i])
-// 	{
-// 		copy[i] = s1[i];
-// 		i++;
-// 	}
-// 	copy[i] = '\0';
-// 	return (copy);
-// }
+	copy = malloc(ft_strlen(s1) + 1);
+	i = 0;
+	if (copy == NULL)
+		return (NULL);
+	while (s1[i])
+	{
+		copy[i] = s1[i];
+		i++;
+	}
+	copy[i] = '\0';
+	return (copy);
+}
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

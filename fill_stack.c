@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 15:14:39 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/09 14:45:17 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/12 15:19:19 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	fill_stack(t_stack **a, char **str)
 		nb = ft_atoi(str[i]);
 		if (nb < INT_MIN || nb > INT_MAX)
 		{
-			ft_putstr_fd(RED"Error\n", 2);
+			ft_putstr_fd(RED"ERROR: your number is greater or less than intiger interval\n", 2);
 			exit (1);
 		}
 		ft_lstadd_back(a, ft_lstnew(nb));

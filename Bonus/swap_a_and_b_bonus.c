@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_dup_nb.c                                     :+:      :+:    :+:   */
+/*   swap_a_and_b_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/01 14:39:27 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/12 15:13:53 by taelkhal         ###   ########.fr       */
+/*   Created: 2023/04/11 15:14:16 by taelkhal          #+#    #+#             */
+/*   Updated: 2023/04/12 15:25:26 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
-void	check_dup_nb(t_stack *a)
+void	swap_a_and_b(t_stack *ptr)
 {
-	int	*str;
-	int	size;
-	int	i;
-	int	j;
+	int tmp;
+	
+	if (ptr == NULL || ptr->next == NULL)
+		return ;
+	tmp = ptr->nb;
+	ptr->nb = ptr->next->nb;
+	ptr->next->nb = tmp;
+}
 
-	i = 0;
-	str = create_array_from_stack_a(a);
-	size = ft_lstsize(a);
-	while (i < size)
-	{
-		j = i + 1;
-		while (j < size)
-		{
-			if (str[i] == str[j])
-			{
-				ft_putstr_fd(RED"ERROR: Duplicate Numbers Found\n", 2);
-				exit (1);
-			}
-			j++;
-		}
-		i++;
-	}
-	free (str);
+void	sa(t_stack **a)
+{
+	swap_a_and_b(*a);
+}
+
+void	sb(t_stack **b)
+{
+	swap_a_and_b(*b);
+}
+
+void	ss(t_stack **a, t_stack **b)
+{
+	swap_a_and_b(*a);
+	swap_a_and_b(*b);
 }
