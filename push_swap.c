@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 13:12:21 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/09 14:46:05 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/15 14:44:16 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	sort_stack(t_stack **a, t_stack **b)
 	else if (size == 3 && !check_if_sorted(*a))
 		sort_three(a);
 	else if (size > 3 && size < 6 && !check_if_sorted(*a))
-		sort_five(a, b);
+		sort__four_and_five(a, b);
 	else if (size <= 100 && !check_if_sorted(*a))
 		sort_up_to_five(a, b, 13);
 	else if (size <= 500 && !check_if_sorted(*a))

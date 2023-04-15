@@ -6,7 +6,7 @@
 #    By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/03 15:01:37 by taelkhal          #+#    #+#              #
-#    Updated: 2023/04/09 15:45:30 by taelkhal         ###   ########.fr        #
+#    Updated: 2023/04/15 15:09:13 by taelkhal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,14 +22,12 @@ SRCS = ft_lstnew.c ft_lstsize.c ft_lstadd_back.c ft_putstr_fd.c \
 		create_array_from_stack_a.c fill_stack.c ft_strjoin.c ft_split.c \
 		push_swap.c ft_strlen.c ft_strdup.c
 
-# SRCS_BS = Bonus/get_next_line.c Bonus/get_next_line_utils.c 
-# 			Bonus/ft_lstnew.c Bonus/ft_lstsize.c Bonus/ft_lstadd_back.c Bonus/ft_putstr_fd.c \
-# 			Bonus/ft_isdigit.c Bonus/ft_atoi.c Bonus/swap_a_and_b.c Bonus/push_a_and_b.c \
-# 			Bonus/rotate_a_and_b.c Bonus/rev_rotate_a_b.c Bonus/sort_nb.c Bonus/utils_sort_up_to_five.c \
-# 			Bonus/sort_and_push_to_b.c Bonus/get_pos_nb.c Bonus/find_max_nb.c Bonus/find_min_nb.c \
-# 			Bonus/place_max_nb_to_top.c Bonus/check_nb.c Bonus/check_dup_nb.c \
-# 			Bonus/create_array_from_stack_a.c Bonus/fill_stack.c Bonus/ft_strjoin.c Bonus/ft_split.c \
-# 			Bonus/push_swap.c Bonus/ft_strlen.c Bonus/ft_strdup.c
+SRCS_BS = Bonus/get_next_line.c Bonus/get_next_line_utils.c Bonus/ft_strcmp.c\
+			Bonus/ft_lstnew.c Bonus/ft_lstsize.c Bonus/ft_lstadd_back.c Bonus/ft_putstr_fd.c \
+			Bonus/ft_isdigit.c Bonus/ft_atoi.c Bonus/swap_a_and_b_bonus.c Bonus/push_a_and_b_bonus.c \
+			Bonus/rotate_a_and_b_bonus.c Bonus/rev_rotate_a_b_bonus.c Bonus/check_nb_bonus.c Bonus/check_dup_nb_bonus.c \
+			Bonus/create_array_from_stack_a.c Bonus/fill_stack.c Bonus/ft_strjoin.c Bonus/ft_split.c \
+			Bonus/push_swap_bonus.c
 
 
 OBJS = $(SRCS:.c=.o)

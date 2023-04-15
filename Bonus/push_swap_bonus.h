@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:09:36 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/13 14:34:32 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/15 15:22:44 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,6 @@ void	rrr(t_stack **a, t_stack **b);
 //utils
 
 int		*fill_tab(t_stack *a);
-void	place_max_nb_to_top(t_stack **stack);
 void	check_nb(char **str);
 int		*create_array_from_stack_a(t_stack *a);
 void	check_dup_nb(t_stack *a);

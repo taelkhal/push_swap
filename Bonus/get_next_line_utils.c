@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 18:17:43 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/12 15:44:01 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/15 15:21:26 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,35 +20,6 @@ size_t	ft_strlen(const char *str)
 	while (str[i])
 		i++;
 	return (i);
-}
-
-char	*ft_strjoin(char *s1, char *s2)
-{
-	int		i;
-	int		j;
-	char	*newstr;
-
-	i = 0;
-	if (!s1 || !s2)
-		return (0);
-	newstr = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
-	if (!newstr)
-		return (NULL);
-	while (s1[i])
-	{
-		newstr[i] = s1[i];
-		i++;
-	}
-	j = 0 ;
-	while (s2[j])
-	{
-		newstr[i] = s2[j];
-		i++;
-		j++;
-	}
-	newstr[i] = '\0';
-	free(s1);
-	return (newstr);
 }
 
 int	ft_strchr(char *s)

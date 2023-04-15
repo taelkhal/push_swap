@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 15:47:01 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/11 15:13:17 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/15 14:44:01 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	rrr(t_stack **a, t_stack **b);
 void	sort_two(t_stack **a);
 void	sort_three(t_stack **a);
 int		find_min_nb(t_stack *stack);
-void	sort_five(t_stack **a, t_stack **b);
+void	sort_four_and_five(t_stack **a, t_stack **b);
 int		get_pos_nb(t_stack *a, int nb);
 void	sort_up_to_five(t_stack **a, t_stack **b, int chank);
 int		*fill_tab(t_stack *a);
