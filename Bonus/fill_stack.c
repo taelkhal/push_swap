@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/15 14:15:53 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/15 14:16:28 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/18 15:09:26 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	fill_stack(t_stack **a, char **str)
 		nb = ft_atoi(str[i]);
 		if (nb < INT_MIN || nb > INT_MAX)
 		{
-			ft_putstr_fd(RED"ERROR: your number is greater or less than intiger interval\n", 2);
+			ft_putstr_fd(RED"Error: Number Is Outside The Integer Range\n", 2);
 			exit (1);
 		}
 		ft_lstadd_back(a, ft_lstnew(nb));

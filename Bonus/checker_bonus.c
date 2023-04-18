@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_bonus.c                                  :+:      :+:    :+:   */
+/*   checker_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 14:41:59 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/15 15:05:53 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/18 14:14:33 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
 
+void	error(void)
+{
+	ft_putstr_fd("Error\n", 2);
+	exit (1);
+}
+
 int	check_if_sorted(t_stack *stack)
 {
+	if (stack == NULL)
+		return (1);
 	while (stack->next != NULL)
 	{
 		if (stack->nb > stack->next->nb)
@@ -25,8 +33,6 @@ int	check_if_sorted(t_stack *stack)
 
 void	moves_checker(t_stack **a, t_stack **b, char *str)
 {
-	if (!str)
-		return ;
 	if (!ft_strcmp(str, "sa\n"))
 		sa(a);
 	else if (!ft_strcmp(str, "sb\n"))
@@ -50,25 +56,14 @@ void	moves_checker(t_stack **a, t_stack **b, char *str)
 	else if (!ft_strcmp(str, "rrr\n"))
 		rrr(a, b);
 	else
-		ft_putstr_fd(RED"Error\n", 2);
-}
-
-void	read_input(t_stack **a, t_stack **b)
-{
-	char	*str;
-
-	while ((str = get_next_line(0)))
-	{
-		moves_checker(a, b, str);
-		free(str);
-	}
+		error();
 }
 
 char	*join_numbers(char **str)
 {
-	int	i;
-	int	j;
-	char *numbers;
+	int		i;
+	int		j;
+	char	*numbers;
 
 	i = 1;
 	numbers = ft_strdup("");
@@ -89,12 +84,12 @@ char	*join_numbers(char **str)
 	return (numbers);
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	t_stack *a;
-	t_stack *b;
-	char **str;
-	char *numbers;
+	t_stack	*a;
+	t_stack	*b;
+	char	**str;
+	char	*numbers;
 
 	if (ac >= 2)
 	{
@@ -109,5 +104,4 @@ int main(int ac, char **av)
 		else
 			ft_putstr_fd("KO\n", 1);
 	}
-	return (0);
 }

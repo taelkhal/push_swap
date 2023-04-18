@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:15:30 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/12 15:24:55 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/16 14:37:57 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	push_a_and_b(t_stack **src, t_stack **dst)
 {
-	t_stack *ptr;
+	t_stack	*ptr;
 
 	if (*src == NULL)
 		return ;

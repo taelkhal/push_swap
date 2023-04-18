@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 15:16:53 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/12 15:25:19 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/16 14:37:26 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	rotate_a_and_b(t_stack **list_stack)
 {
-	t_stack *ptr;
-	t_stack *last_node;
+	t_stack	*ptr;
+	t_stack	*last_node;
 
-	if(*list_stack == NULL || (*list_stack)->next == NULL)
+	if (*list_stack == NULL || (*list_stack)->next == NULL)
 		return ;
 	ptr = *list_stack;
 	*list_stack = (*list_stack)->next;

@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 14:27:34 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/01 14:38:52 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/16 14:06:19 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	*create_array_from_stack_a(t_stack *a)
 {
-    int	*str;
-    int	i;
-	int size;
+	int	*str;
+	int	i;
+	int	size;
 
 	i = 0;
 	size = ft_lstsize(a);

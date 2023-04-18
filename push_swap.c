@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 13:12:21 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/15 14:44:16 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/18 14:02:29 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	sort_stack(t_stack **a, t_stack **b)
 	else if (size == 3 && !check_if_sorted(*a))
 		sort_three(a);
 	else if (size > 3 && size < 6 && !check_if_sorted(*a))
-		sort__four_and_five(a, b);
+		sort_four_and_five(a, b);
 	else if (size <= 100 && !check_if_sorted(*a))
 		sort_up_to_five(a, b, 13);
 	else if (size <= 500 && !check_if_sorted(*a))
@@ -44,9 +44,9 @@ void	sort_stack(t_stack **a, t_stack **b)
 
 char	*join_numbers(char **str)
 {
-	int	i;
-	int	j;
-	char *numbers;
+	int		i;
+	int		j;
+	char	*numbers;
 
 	i = 1;
 	numbers = ft_strdup("");
@@ -67,12 +67,12 @@ char	*join_numbers(char **str)
 	return (numbers);
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	t_stack *a;
-	t_stack *b;
-	char **str;
-	char *numbers;
+	t_stack	*a;
+	t_stack	*b;
+	char	**str;
+	char	*numbers;
 
 	if (ac >= 2)
 	{
@@ -83,5 +83,4 @@ int main(int ac, char **av)
 		fill_stack(&a, str);
 		sort_stack(&a, &b);
 	}
-	return (0);
 }

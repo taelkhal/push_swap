@@ -6,7 +6,7 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 13:27:58 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/15 14:43:43 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/16 14:24:09 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	sort_two(t_stack **a)
 {
-	if((*a)->nb > (*a)->next->nb)
-	sa(a);
+	if ((*a)->nb > (*a)->next->nb)
+		sa(a);
 }
 
 void	sort_three(t_stack **a)
 {
 	if (((*a)->nb > (*a)->next->nb)
 		&& ((*a)->nb < (*a)->next->next->nb))
-			sa(a);
+		sa(a);
 	else if (((*a)->nb < (*a)->next->nb)
 		&& ((*a)->nb > (*a)->next->next->nb))
-			rra(a);
+		rra(a);
 	else if (((*a)->nb < (*a)->next->nb) && ((*a)->nb < (*a)->next->next->nb))
 	{
 		if ((*a)->next->nb > (*a)->next->next->nb)
@@ -34,7 +34,7 @@ void	sort_three(t_stack **a)
 			sa(a);
 		}
 	}
-	else if (((*a)->nb > (*a)->next->nb) 
+	else if (((*a)->nb > (*a)->next->nb)
 		&& ((*a)->nb > (*a)->next->next->nb))
 	{
 		if ((*a)->next->nb < (*a)->next->next->nb)

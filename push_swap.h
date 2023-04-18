@@ -6,44 +6,37 @@
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 15:47:01 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/15 14:44:01 by taelkhal         ###   ########.fr       */
+/*   Updated: 2023/04/18 14:50:35 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# ifndef PUSH_SWAP_H
+#ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-
-# include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
 # include <fcntl.h>
 # include <limits.h>
 
 # define RED	"\033[1m\033[31m"
+
 typedef struct s_stack
 {
 	int				nb;
 	struct s_stack	*next;
 }					t_stack;
 
-
-
 //libft
 t_stack	*ft_lstnew(int nb);
-int	ft_lstsize(t_stack *stack_a);
+int		ft_lstsize(t_stack *stack_a);
 void	ft_lstadd_back(t_stack **lst, t_stack *new);
 void	ft_putstr_fd(char *str, int fd);
-int	ft_isdigit(int c);
-// int	ft_atoi(const char *str);
+int		ft_isdigit(int c);
 char	*ft_strjoin(char *s1, char *s2);
 long	ft_atoi(const char *str);
-// char	*ft_strjoin(char const *s1, char const *s2);
-// static int	ft_strlen(const char *s);
-int	ft_strlen(const char *s);
+int		ft_strlen(const char *s);
 char	*ft_strdup(const char *s1);
 char	**ft_split(char const *s, char c);
-
 
 // actions
 
@@ -68,12 +61,11 @@ int		get_pos_nb(t_stack *a, int nb);
 void	sort_up_to_five(t_stack **a, t_stack **b, int chank);
 int		*fill_tab(t_stack *a);
 void	sort_and_push_to_b(t_stack **a, t_stack **b, int *tab, int chank);
-int 	find_max_nb(t_stack *stack);
+int		find_max_nb(t_stack *stack);
 void	place_max_nb_to_top(t_stack **stack);
 void	check_nb(char **str);
 int		*create_array_from_stack_a(t_stack *a);
 void	check_dup_nb(t_stack *a);
 void	fill_stack(t_stack **a, char **str);
-
 
 #endif

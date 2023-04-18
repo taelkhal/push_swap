@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: taelkhal <taelkhal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/07 16:22:50 by taelkhal          #+#    #+#             */
-/*   Updated: 2023/04/07 16:24:44 by taelkhal         ###   ########.fr       */
+/*   Created: 2023/04/16 14:39:50 by taelkhal          #+#    #+#             */
+/*   Updated: 2023/04/16 15:13:12 by taelkhal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_strlen(const char *s)
 {
-    int     i;
+	int	i;
 
-    i = 0;
-    while (s[i])
-        i++;
-    return (i);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }
